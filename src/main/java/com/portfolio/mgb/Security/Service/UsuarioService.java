@@ -22,11 +22,11 @@ public class UsuarioService {
     }
     
     public boolean existByNombreUsuario(String nombreUsuario) {
-        return iusuarioRepository.existByNombreUsuario(nombreUsuario) ;
+        return iusuarioRepository.existsByNombreUsuario(nombreUsuario) ;
     }
     
       public boolean existByEmail(String Email) {
-        return iusuarioRepository.existByEmail(Email) ;
+        return iusuarioRepository.existsByEmail(Email) ;
     }
       public void save(Usuario usuario) {
           iusuarioRepository.save(usuario) ;
