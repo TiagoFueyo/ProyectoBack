@@ -4,7 +4,6 @@
  */
 package com.portfolio.mgb.Security.jwt;
 
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,15 +15,14 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
 @Component
-public class JwtEntryPoint implements AuthenticationEntryPoint {
-    private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class) ;
+public class JwtEntryPoint implements AuthenticationEntryPoint{
+    private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        logger.error("Fallo el metodo commence") ;
+        logger.error("Falló el metodo commence ");
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
     }
     
     
 }
-
